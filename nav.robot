@@ -8,40 +8,25 @@ Test Teardown   Close Session
 
 ***Test Cases***
 Deve acessar a tela Dialogs
-    Wait Until Page Contains            COMEÇAR
-    Click Text                          COMEÇAR
+    Get Started    
 
-    Wait Until Element Is Visible       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Click Element                       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/navView
-    Click Text                          DIALOGS
+    Open Nav
 
-    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/toolbarTitle
-    Element Text Should Be              id=io.qaninja.android.twp:id/toolbarTitle   DIALOGS
+    Open Screen DIALOGS
 
 Deve acessar a tela de formulários
-    Wait Until Page Contains            COMEÇAR
-    Click Text                          COMEÇAR
+    Get Started
 
-    Wait Until Element Is Visible       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Click Element                       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/navView
-    Click Text                          FORMS
+    Open Nav
 
-    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/toolbarTitle
-    Element Text Should Be              id=io.qaninja.android.twp:id/toolbarTitle   FORMS
+    Open Screen FORMS
 
 Deve acessar a tela de vingadores
-    Wait Until Page Contains            COMEÇAR
-    Click Text                          COMEÇAR
+    Get Started
 
-    Wait Until Element Is Visible       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Click Element                       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/navView
-    Click Text                          AVENGERS
+    Open Nav
 
-    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/toolbarTitle
-    Element Text Should Be              id=io.qaninja.android.twp:id/toolbarTitle   AVENGERS
+    Open Screen AVENGERS
 
 ***Keywords***
 Open Session
@@ -54,3 +39,17 @@ Open Session
 
 Close Session
     Close Application
+
+Get Started
+    Wait Until Page Contains            COMEÇAR
+    Click Text                          COMEÇAR
+
+Open Nav
+    Wait Until Element Is Visible       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
+    Click Element                       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
+    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/navView
+
+Open Screen ${screen}
+    Click Text                          ${screen}
+    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/toolbarTitle
+    Element Text Should Be              id=io.qaninja.android.twp:id/toolbarTitle   ${screen}
