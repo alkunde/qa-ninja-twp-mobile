@@ -1,15 +1,13 @@
 ***Settings***
-Library   AppiumLibrary
+Library         AppiumLibrary
+
+# Executa a keyword antes de cada testecase
+Test Setup      Open Session
+# Executa a keyword depois de cada testcase
+Test Teardown   Close Session
 
 ***Test Cases***
 Deve acessar a tela Dialogs
-    Set Appium Timeout  5
-    Open Application    http://localhost:4723/wd/hub
-    ...                 automationName=UiAutomator2
-    ...                 platformName=Android
-    ...                 deviceName=Android Emulator
-    ...                 app=${EXECDIR}/app/twp.apk
-
     Wait Until Page Contains            COMEÇAR
     Click Text                          COMEÇAR
 
@@ -21,16 +19,7 @@ Deve acessar a tela Dialogs
     Wait Until Element Is Visible       id=io.qaninja.android.twp:id/toolbarTitle
     Element Text Should Be              id=io.qaninja.android.twp:id/toolbarTitle   DIALOGS
 
-    Close Application
-
 Deve acessar a tela de formulários
-    Set Appium Timeout  5
-    Open Application    http://localhost:4723/wd/hub
-    ...                 automationName=UiAutomator2
-    ...                 platformName=Android
-    ...                 deviceName=Android Emulator
-    ...                 app=${EXECDIR}/app/twp.apk
-
     Wait Until Page Contains            COMEÇAR
     Click Text                          COMEÇAR
 
@@ -42,4 +31,26 @@ Deve acessar a tela de formulários
     Wait Until Element Is Visible       id=io.qaninja.android.twp:id/toolbarTitle
     Element Text Should Be              id=io.qaninja.android.twp:id/toolbarTitle   FORMS
 
+Deve acessar a tela de vingadores
+    Wait Until Page Contains            COMEÇAR
+    Click Text                          COMEÇAR
+
+    Wait Until Element Is Visible       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
+    Click Element                       xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
+    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/navView
+    Click Text                          AVENGERS
+
+    Wait Until Element Is Visible       id=io.qaninja.android.twp:id/toolbarTitle
+    Element Text Should Be              id=io.qaninja.android.twp:id/toolbarTitle   AVENGERS
+
+***Keywords***
+Open Session
+    Set Appium Timeout  5
+    Open Application    http://localhost:4723/wd/hub
+    ...                 automationName=UiAutomator2
+    ...                 platformName=Android
+    ...                 deviceName=Android Emulator
+    ...                 app=${EXECDIR}/app/twp.apk
+
+Close Session
     Close Application
