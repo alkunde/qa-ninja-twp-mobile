@@ -15,6 +15,7 @@ Open Session
     ...                 platformName=Android
     ...                 deviceName=Android Emulator
     ...                 app=${EXECDIR}/app/twp.apk
+    Get Started
 
 Close Session
     Close Application
