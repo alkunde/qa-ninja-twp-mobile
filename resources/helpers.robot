@@ -84,3 +84,9 @@ Go To Register Form
     Click Text                      CADASTRO
     Wait Until Element Is Visible   ${REGISTER_TITLE}
     Element Text Should Be          ${REGISTER_TITLE}       Bem-vindo, crie sua conta.
+
+Go To Avengers List
+    Open Nav
+
+    Open Screen AVENGERS
+    Click Text                      LISTA
