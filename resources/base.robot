@@ -13,4 +13,5 @@ Open Session
     Get Started
 
 Close Session
+    Capture Page Screenshot
     Close Application

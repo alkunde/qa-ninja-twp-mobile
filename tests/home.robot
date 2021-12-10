@@ -12,4 +12,4 @@ Deve abrir a tela principal
 
     Wait Until Page Contains    Training Wheels Protocol
     Wait Until Page Contains    Mobile Version
-    Close Application
+    Close Session
