@@ -8,11 +8,6 @@ Test Teardown   Close Session
 Deve mover o Hulk para o topo da lista
     Go To Avengers List
 
-    Drag And Drop           io.qaninja.android.twp:id/txtName       3       0
-    Sleep                   5
-
-Deve mover o Hulk para o topo da lista 1
-    Go To Avengers List
-
-    Drag And Drop           io.qaninja.android.twp:id/image_view       3       0
+    Wait Until Page Contains    Capitão América
+    Drag And Drop           io.qaninja.android.twp:id/drag_handle       2       0
     Sleep                   5

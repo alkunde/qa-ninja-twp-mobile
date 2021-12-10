@@ -7,6 +7,7 @@ def drag_drop(element_id, p_origin, p_target):
     appiumLib = BuiltIn().get_library_instance('AppiumLibrary')
     driver = appiumLib._current_application()
 
+    # driver.Wait Until Page Contains    Capitão América
     ele_origin = driver.find_elements_by_id(element_id)[int(p_origin)]
     ele_target = driver.find_elements_by_id(element_id)[int(p_target)]
 
