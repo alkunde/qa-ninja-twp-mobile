@@ -7,6 +7,13 @@ ${HAMBURGER}        xpath=//android.widget.ImageButton[@content-desc="Open navig
 ${NAVIGATION}       id=io.qaninja.android.twp:id/navView
 ${TOOLBAR_TITLE}    id=io.qaninja.android.twp:id/toolbarTitle
 
+${REGISTER_TITLE}   id=io.qaninja.android.twp:id/dialogInfoTitle
+${REG_NAME}         id=io.qaninja.android.twp:id/etUsername
+${REG_EMAIL}        id=io.qaninja.android.twp:id/etEmail
+${REG_ASSWORD}      id=io.qaninja.android.twp:id/etPassword
+${REG_SPINNER}      id=io.qaninja.android.twp:id/spinnerJob
+${REG_BUTTON}       id=io.qaninja.android.twp:id/btnSubmit
+
 ***Keywords***
 Get Started
     Wait Until Page Contains            ${START}
@@ -69,3 +76,11 @@ Go To Long Click
     Click Text                      CLIQUE LONGO
 
     Wait Until Page Contains        Botão clique longo
+
+Go To Register Form
+    Open Nav
+
+    Open Screen FORMS
+    Click Text                      CADASTRO
+    Wait Until Element Is Visible   ${REGISTER_TITLE}
+    Element Text Should Be          ${REGISTER_TITLE}       Bem-vindo, crie sua conta.
