@@ -35,3 +35,11 @@ Go To Login Form
 
     Element Text Should Be          ${TITLE}        Fala QA, vamos testar o login?
     Element Text Should Be          ${BUTTON}       ENTRAR
+
+Go To Radio Buttons
+    Open Nav
+
+    Open Screen INPUTS
+
+    Click Text                      BOTÕES DE RADIO
+    Wait Until Page Contains        Escolha sua linguagem preferida
