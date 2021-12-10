@@ -51,3 +51,12 @@ Go To Checkbox
 
     Click Text                      CHECKBOX
     Wait Until Page Contains        Marque as techs que usam Appium
+
+Go To Short Click
+    Open Nav
+
+    Click Text                      BOTÕES
+    Wait Until Page Contains        CLIQUE SIMPLES
+    Click Text                      CLIQUE SIMPLES
+
+    Wait Until Page Contains        Botão clique simples
